@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+	
+	<HELLO_WORLD ID="1" LAST_NAME="premier" FIRST_NAME="premier" />
+	<HELLO_WORLD ID="2" LAST_NAME="second" FIRST_NAME="second" />
+
+</dataset>
