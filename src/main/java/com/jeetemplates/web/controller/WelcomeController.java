@@ -5,6 +5,7 @@ package com.jeetemplates.web.controller;
 
 import java.util.List;
 
+import javax.faces.FacesException;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 
@@ -69,6 +70,15 @@ public class WelcomeController {
 			listHellos = helloWorldService.retrieveAll();
 		}
 		return listHellos;
+	}
+
+	/**
+	 * Throw {@link FacesException}.
+	 * 
+	 * @return outcome "welcome"
+	 */
+	public String throwException() {
+		throw new FacesException();
 	}
 
 	/* ************************************ */

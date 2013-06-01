@@ -39,4 +39,5 @@ public interface HelloWorldService {
 	 * @return
 	 */
 	List<HelloWorldDTO> retrieveAll();
+
 }

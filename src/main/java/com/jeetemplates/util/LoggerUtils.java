@@ -25,7 +25,19 @@ public final class LoggerUtils {
 	 *            : message to display
 	 */
 	public static void logDebug(String message) {
-		logger.debug(message);
+		logDebug(message, null);
+	}
+
+	/**
+	 * Log debug.
+	 * 
+	 * @param message
+	 *            : message to display
+	 * @param throwable
+	 *            : cause
+	 */
+	public static void logDebug(String message, Throwable throwable) {
+		logger.debug(message, throwable);
 	}
 
 	/**
@@ -36,6 +48,28 @@ public final class LoggerUtils {
 	 */
 	public static void logInfo(String message) {
 		logger.info(message);
+	}
+
+	/**
+	 * Log error.
+	 * 
+	 * @param message
+	 *            : message to display
+	 * @param throwable
+	 *            : cause
+	 */
+	public static void logError(String message, Throwable throwable) {
+		logger.error(message, throwable);
+	}
+
+	/**
+	 * Log error.
+	 * 
+	 * @param message
+	 *            : message to display
+	 */
+	public static void logError(String message) {
+		logError(message, null);
 	}
 
 	/**
