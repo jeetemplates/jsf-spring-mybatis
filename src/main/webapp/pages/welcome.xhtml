@@ -6,20 +6,20 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
-	<title>JSF 2.0 Hello World</title>
+	<title><h:outputText value="#{i18n['welcome.head.title']}" /></title>
 </h:head>
 <h:body>
 
 	<ui:composition template="/pages/template/layout.xhtml">
 		<ui:define name="content">
-			<h3>JSF 2.0 Hello World Example - welcome.xhtml</h3>
+			<h3><h:outputText value="#{i18n['welcome.content.title']}" /></h3>
 			<h4>
 				<h:dataTable value="#{welcomeController.retrieveList()}" var="hello">
 					<h:column>#{hello.firstName}</h:column>
 					<h:column>#{hello.lastName}</h:column>
 				</h:dataTable>
 				<br />
-				<h:link outcome="home">Return to home</h:link>
+				<h:link outcome="home"><h:outputText value="#{i18n['welcome.content.link_home']}" /></h:link>
 			</h4>
 
 		</ui:define>

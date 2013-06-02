@@ -6,24 +6,24 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
-	<title>JSF 2.0 Hello World</title>
+	<title><h:outputText value="#{i18n['home.head.title']}" /></title>
 </h:head>
 <h:body>
 
 	<ui:composition template="/pages/template/layout.xhtml">
 	
 		<ui:define name="content">
-			<h3>JSF 2.0 Hello World Example - hello.xhtml</h3>
+			<h3><h:outputText value="#{i18n['home.content.title']}" /></h3>
 			<h:form>
-				First name : <h:inputText value="#{helloWorldForm.firstName}"></h:inputText>
+				<h:outputText value="#{i18n['home.content.form.first_name']}" /> : <h:inputText value="#{helloWorldForm.firstName}"></h:inputText>
 				<br/>
-				Last name : <h:inputText value="#{helloWorldForm.lastName}"></h:inputText>
+				<h:outputText value="#{i18n['home.content.form.last_name']}" /> : <h:inputText value="#{helloWorldForm.lastName}"></h:inputText>
 				<br/>
-				<h:commandButton value="Add hello" action="#{welcomeController.createHello()}" />
+				<h:commandButton value="#{i18n['home.content.form.add']}" action="#{welcomeController.createHello()}" />
 			</h:form>
 			<br/>
 			<h:form>
-				<h:commandButton value="Throw Exception" action="#{welcomeController.throwException()}" />
+				<h:commandButton value="#{i18n['home.content.form.throw_exception']}" action="#{welcomeController.throwException()}" />
 			</h:form>
 		</ui:define>
 	</ui:composition>
