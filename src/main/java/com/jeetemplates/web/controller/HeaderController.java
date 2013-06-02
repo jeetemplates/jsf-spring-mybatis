@@ -3,6 +3,7 @@
  */
 package com.jeetemplates.web.controller;
 
+import java.io.Serializable;
 import java.util.Locale;
 
 import javax.faces.bean.ManagedBean;
@@ -16,7 +17,12 @@ import javax.faces.context.FacesContext;
  */
 @ManagedBean
 @SessionScoped
-public class HeaderController {
+public class HeaderController implements Serializable {
+	
+	/**
+	 * Serial UID.
+	 */
+    private static final long serialVersionUID = -7522609234232367231L;
 
 	/* ************************************ */
 	/* Dependencies */
