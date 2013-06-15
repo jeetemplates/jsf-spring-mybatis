@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jeetemplates.business.dao;
+package com.jeetemplates.persistence;
 
 import java.io.FileInputStream;
 import java.util.List;
@@ -13,9 +13,9 @@ import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.jeetemplates.business.model.HelloWorld;
-import com.jeetemplates.business.persistence.HelloWorldDao;
-import com.jeetemplates.common.dao.BaseDaoTest;
+import com.jeetemplates.common.persistence.BaseDaoTest;
+import com.jeetemplates.domain.model.HelloWorld;
+import com.jeetemplates.persistence.HelloWorldDao;
 
 /**
  * Test of {@link HelloWorldDao}.

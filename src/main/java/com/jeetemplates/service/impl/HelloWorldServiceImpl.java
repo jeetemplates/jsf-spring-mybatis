@@ -11,8 +11,8 @@ import javax.inject.Named;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jeetemplates.business.model.HelloWorld;
-import com.jeetemplates.business.persistence.HelloWorldDao;
+import com.jeetemplates.domain.model.HelloWorld;
+import com.jeetemplates.persistence.HelloWorldDao;
 import com.jeetemplates.service.HelloWorldService;
 import com.jeetemplates.service.dto.HelloWorldDTO;
 import com.jeetemplates.util.LoggerUtils;

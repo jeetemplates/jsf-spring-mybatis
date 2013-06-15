@@ -12,7 +12,7 @@
 
 	<!-- MyBatis Mappers -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.jeetemplates.business.persistence" />
+		<property name="basePackage" value="com.jeetemplates.persistence" />
 	</bean>
 	
 </beans>

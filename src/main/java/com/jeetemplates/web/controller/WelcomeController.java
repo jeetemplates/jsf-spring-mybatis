@@ -9,7 +9,7 @@ import javax.faces.FacesException;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 
-import com.jeetemplates.business.model.HelloWorld;
+import com.jeetemplates.domain.model.HelloWorld;
 import com.jeetemplates.service.HelloWorldService;
 import com.jeetemplates.service.dto.HelloWorldDTO;
 import com.jeetemplates.util.LoggerUtils;

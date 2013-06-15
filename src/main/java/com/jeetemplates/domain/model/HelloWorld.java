@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jeetemplates.business.model;
+package com.jeetemplates.domain.model;
 
 import com.jeetemplates.common.model.BusinessEntity;
 

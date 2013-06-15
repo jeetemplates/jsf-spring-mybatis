@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.2//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jeetemplates.business.persistence.HelloWorldDao">
+<mapper namespace="com.jeetemplates.persistence.HelloWorldDao">
 
   <cache />
   
   
   <insert id="create" 
-  		  parameterType="com.jeetemplates.business.model.HelloWorld" 
+  		  parameterType="com.jeetemplates.domain.model.HelloWorld" 
   		  useGeneratedKeys="true" 
   		  keyColumn="ID" 
   		  keyProperty="id"
@@ -21,7 +21,7 @@
 <!--     </selectKey> -->
   </insert>
   
-  <select id="retrieveAll" resultType="com.jeetemplates.business.model.HelloWorld">
+  <select id="retrieveAll" resultType="com.jeetemplates.domain.model.HelloWorld">
     SELECT
       ID AS id,
       LAST_NAME AS lastName,

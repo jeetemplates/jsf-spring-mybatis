@@ -10,7 +10,7 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.jeetemplates.business.model.HelloWorld;
+import com.jeetemplates.domain.model.HelloWorld;
 import com.jeetemplates.service.dto.HelloWorldDTO;
 import com.jeetemplates.util.MapperUtils;
 

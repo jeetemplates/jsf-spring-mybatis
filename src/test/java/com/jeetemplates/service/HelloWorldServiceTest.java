@@ -13,9 +13,9 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.test.util.ReflectionTestUtils;
 
-import com.jeetemplates.business.model.HelloWorld;
-import com.jeetemplates.business.persistence.HelloWorldDao;
 import com.jeetemplates.common.service.BaseServiceTest;
+import com.jeetemplates.domain.model.HelloWorld;
+import com.jeetemplates.persistence.HelloWorldDao;
 import com.jeetemplates.service.HelloWorldService;
 import com.jeetemplates.service.dto.HelloWorldDTO;
 import com.jeetemplates.service.impl.HelloWorldServiceImpl;

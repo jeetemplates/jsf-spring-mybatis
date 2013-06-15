@@ -5,7 +5,7 @@ package com.jeetemplates.service;
 
 import java.util.List;
 
-import com.jeetemplates.business.model.HelloWorld;
+import com.jeetemplates.domain.model.HelloWorld;
 import com.jeetemplates.service.dto.HelloWorldDTO;
 
 /**
