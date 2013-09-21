@@ -10,9 +10,9 @@ import java.util.List;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.jeetemplates.domain.model.HelloWorld;
-import com.jeetemplates.service.dto.HelloWorldDTO;
-import com.jeetemplates.util.MapperUtils;
+import com.jeetemplates.app.domain.HelloWorld;
+import com.jeetemplates.app.service.dto.HelloWorldDTO;
+import com.jeetemplates.app.util.MapperUtils;
 
 /**
  * Test class of {@link MapperUtils}.

@@ -13,9 +13,9 @@ import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.junit.Assert;
 import org.junit.Test;
 
+import com.jeetemplates.app.domain.HelloWorld;
+import com.jeetemplates.app.persistence.HelloWorldDao;
 import com.jeetemplates.common.persistence.BaseDaoTest;
-import com.jeetemplates.domain.model.HelloWorld;
-import com.jeetemplates.persistence.HelloWorldDao;
 
 /**
  * Test of {@link HelloWorldDao}.

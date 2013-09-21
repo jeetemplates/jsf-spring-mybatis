@@ -8,7 +8,7 @@ import ma.glasnost.orika.MapperFacade;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import com.jeetemplates.mapper.OrikaMapper;
+import com.jeetemplates.app.mapper.OrikaMapper;
 
 /**
  * Base class for service test.

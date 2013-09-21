@@ -8,9 +8,9 @@
 	<ui:composition>
 		<h1><h:outputText value="#{i18n['header']}" /></h1>
 		<h:form>
-			<h:commandLink value="en" action="#{headerController.setLanguage('en')}" /> 
+			<h:commandLink value="en" action="#{localeBean.setLanguage('en')}" /> 
 			| 
-			<h:commandLink value="fr" action="#{headerController.setLanguage('fr')}" />
+			<h:commandLink value="fr" action="#{localeBean.setLanguage('fr')}" />
 		</h:form>
 	</ui:composition>
 </body>

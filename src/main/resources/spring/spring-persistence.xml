@@ -8,6 +8,7 @@
 	   					   http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
 
 	<!-- C3P0 Datasource, uncomment it if you want C3P0 datasource -->
+	<!-- If this is uncommented, be aware to create the schema !!! (in memory spring database create schema with reference to script -->
 <!-- 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" -->
 <!-- 		destroy-method="close"> -->
 <!-- 		<property name="driverClass" value="${jdbc.driverClass}" /> -->

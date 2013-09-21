@@ -20,7 +20,7 @@
 	</application>
 
 	<factory>
-		<exception-handler-factory>com.jeetemplates.web.exception.DefaultExceptionHandlerFactory</exception-handler-factory>
+		<exception-handler-factory>com.jeetemplates.app.web.exception.DefaultExceptionHandlerFactory</exception-handler-factory>
 	</factory>
 
 </faces-config>

@@ -13,12 +13,12 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.test.util.ReflectionTestUtils;
 
+import com.jeetemplates.app.domain.HelloWorld;
+import com.jeetemplates.app.persistence.HelloWorldDao;
+import com.jeetemplates.app.service.HelloWorldService;
+import com.jeetemplates.app.service.dto.HelloWorldDTO;
+import com.jeetemplates.app.service.impl.HelloWorldServiceImpl;
 import com.jeetemplates.common.service.BaseServiceTest;
-import com.jeetemplates.domain.model.HelloWorld;
-import com.jeetemplates.persistence.HelloWorldDao;
-import com.jeetemplates.service.HelloWorldService;
-import com.jeetemplates.service.dto.HelloWorldDTO;
-import com.jeetemplates.service.impl.HelloWorldServiceImpl;
 
 /**
  * Test of {@link HelloWorldService}.
