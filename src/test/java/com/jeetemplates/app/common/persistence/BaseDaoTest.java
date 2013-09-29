@@ -1,12 +1,11 @@
 /**
  * 
  */
-package com.jeetemplates.common.persistence;
+package com.jeetemplates.app.common.persistence;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import javax.inject.Inject;
 import javax.sql.DataSource;
 
 import org.dbunit.DBTestCase;
@@ -16,6 +15,7 @@ import org.dbunit.operation.DatabaseOperation;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -31,7 +31,7 @@ public abstract class BaseDaoTest extends DBTestCase {
 	/**
 	 * {@link DataSource} : datasource.
 	 */
-	@Inject
+    @Autowired
 	private DataSource datasource;
 
 	/**

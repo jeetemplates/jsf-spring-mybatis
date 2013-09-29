@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jeetemplates.utils;
+package com.jeetemplates.app.utils;
 
 
 import java.util.ArrayList;

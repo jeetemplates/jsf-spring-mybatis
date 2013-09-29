@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jeetemplates.common.service;
+package com.jeetemplates.app.common.service;
 
 import ma.glasnost.orika.MapperFacade;
 

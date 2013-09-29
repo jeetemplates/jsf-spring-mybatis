@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jeetemplates.service;
+package com.jeetemplates.app.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,12 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.test.util.ReflectionTestUtils;
 
+import com.jeetemplates.app.common.service.BaseServiceTest;
 import com.jeetemplates.app.domain.HelloWorld;
 import com.jeetemplates.app.persistence.HelloWorldDao;
 import com.jeetemplates.app.service.HelloWorldService;
 import com.jeetemplates.app.service.dto.HelloWorldDTO;
 import com.jeetemplates.app.service.impl.HelloWorldServiceImpl;
-import com.jeetemplates.common.service.BaseServiceTest;
 
 /**
  * Test of {@link HelloWorldService}.

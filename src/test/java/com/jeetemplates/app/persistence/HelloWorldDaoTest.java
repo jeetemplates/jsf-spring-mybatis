@@ -1,21 +1,19 @@
 /**
  * 
  */
-package com.jeetemplates.persistence;
+package com.jeetemplates.app.persistence;
 
 import java.io.FileInputStream;
 import java.util.List;
-
-import javax.inject.Inject;
 
 import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.junit.Assert;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import com.jeetemplates.app.common.persistence.BaseDaoTest;
 import com.jeetemplates.app.domain.HelloWorld;
-import com.jeetemplates.app.persistence.HelloWorldDao;
-import com.jeetemplates.common.persistence.BaseDaoTest;
 
 /**
  * Test of {@link HelloWorldDao}.
@@ -27,7 +25,7 @@ public class HelloWorldDaoTest extends BaseDaoTest {
 	/**
 	 * {@link HelloWorldDao}.
 	 */
-	@Inject
+    @Autowired
 	private HelloWorldDao helloWorldDao;
 
 	/**
