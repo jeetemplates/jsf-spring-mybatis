@@ -8,10 +8,7 @@ Template for building JEE app with JSF, Spring and Mybatis
 - JSF handling exception
 
 Frameworks
-- JDK 7
-- Tomcat 7 / JBoss 7
-- JSF 2.1
-- Spring 3.1
+- JDK 8
+- Tomcat 8 / Wildfly 8
+- Spring IO Platform 1.0.2 (JSF 2.2, Spring 4.0)
 - MyBatis 3.2
-
-JSF 2.2 works (out of the box) with Tomcat 7 but not with JBoss 7.1
