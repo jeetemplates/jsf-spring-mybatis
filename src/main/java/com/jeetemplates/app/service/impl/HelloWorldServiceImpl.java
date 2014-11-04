@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.jeetemplates.app.service.impl;
 
@@ -14,48 +14,44 @@ import com.jeetemplates.app.domain.HelloWorld;
 import com.jeetemplates.app.persistence.HelloWorldDao;
 import com.jeetemplates.app.service.HelloWorldService;
 import com.jeetemplates.app.service.dto.HelloWorldDTO;
-import com.jeetemplates.app.util.LoggerUtils;
-import com.jeetemplates.app.util.MapperUtils;
+import java.util.stream.Collectors;
 
 /**
  * Implementation of {@link HelloWorldService}
- * 
+ *
  * @author jeetemplates
  */
 @Service(HelloWorldService.BEAN_NAME)
 public class HelloWorldServiceImpl implements HelloWorldService {
 
-	/* ************************************ */
-	/* Dependencies */
-	/* ************************************ */
-
-	/**
-	 * {@link HelloWorldDao}
-	 */
+    /* ************************************ */
+    /* Dependencies */
+    /* ************************************ */
+    /**
+     * {@link HelloWorldDao}
+     */
     @Autowired
-	private HelloWorldDao helloWorldDao;
+    private HelloWorldDao helloWorldDao;
 
-	/* ************************************ */
-	/* Methods */
-	/* ************************************ */
+    /* ************************************ */
+    /* Methods */
+    /* ************************************ */
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
+    public void create(HelloWorld entity) {
+        helloWorldDao.create(entity);
+    }
 
-	@Override
-	@Transactional(propagation = Propagation.REQUIRED, readOnly = false)
-	public void create(HelloWorld entity) {
-		LoggerUtils.logStartMethod("create");
-		helloWorldDao.create(entity);
-		LoggerUtils.logEndMethod("create");
-	}
-
-	@Override
-	@Transactional(propagation = Propagation.REQUIRED, readOnly = true)
-	public List<HelloWorldDTO> retrieveAll() {
-		LoggerUtils.logStartMethod("retrieveAll");
-		List<HelloWorld> listEntities = helloWorldDao.retrieveAll();
-		@SuppressWarnings("unchecked")
-		List<HelloWorldDTO> returnValue = (List<HelloWorldDTO>) MapperUtils.mapAsList(listEntities, HelloWorldDTO.class);
-		LoggerUtils.logEndMethod("retrieveAll");
-		return returnValue;
-	}
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
+    public List<HelloWorldDTO> retrieveAll() {
+        List<HelloWorld> entities = helloWorldDao.retrieveAll();
+        return entities.stream().map((HelloWorld entity) -> {
+            HelloWorldDTO dto = new HelloWorldDTO();
+            dto.setFirstName(entity.getFirstName());
+            dto.setLastName(entity.getLastName());
+            return dto;
+        }).collect(Collectors.toList());
+    }
 
 }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <h:head>
+        <title><h:outputText value="#{i18n['home.head.title']}" /></title>
+    </h:head>
+    <h:body>
+
+        <ui:composition template="/WEB-INF/template/layout.xhtml">
+
+            <ui:define name="content">
+                <h3><h:outputText value="#{i18n['home.content.title']}" /></h3>
+                <h:form>
+                    <h:outputText value="#{i18n['home.content.form.first_name']}" /> : <h:inputText value="#{helloWorldForm.firstName}"></h:inputText>
+                    <br/>
+                    <h:outputText value="#{i18n['home.content.form.last_name']}" /> : <h:inputText value="#{helloWorldForm.lastName}"></h:inputText>
+                    <br/>
+                    <h:commandButton value="#{i18n['home.content.form.add']}" action="#{welcomeController.createHello()}" />
+                </h:form>
+                <br/>
+                <h:form>
+                    <h:commandButton value="#{i18n['home.content.form.throw_exception']}" action="#{welcomeController.throwException()}" />
+                </h:form>
+            </ui:define>
+        </ui:composition>
+
+    </h:body>
+</html>

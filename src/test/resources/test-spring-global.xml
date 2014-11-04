@@ -7,8 +7,7 @@
 	http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-	<import resource="classpath:spring/spring-beans.xml" />
-	<import resource="classpath:spring/spring-persistence.xml" />
+	<import resource="classpath:spring/spring.xml" />
 
 	<!-- Resources -->
 	<context:property-placeholder
