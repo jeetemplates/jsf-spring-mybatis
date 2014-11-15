@@ -3,15 +3,17 @@
  */
 package com.jeetemplates.app.common;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Generic DAO Interface. CRUD methods.
  *
  * @author jeetemplates
+ * @param <ID>
  * @param <BE>
  */
-public interface BusinessDao<BE extends BusinessEntity> {
+public interface BusinessDao<ID extends Serializable, BE extends BusinessEntity<ID>> {
 
     /**
      * Create in database
@@ -19,7 +21,7 @@ public interface BusinessDao<BE extends BusinessEntity> {
      * @param entity
      * @return entity persisted
      */
-    Long create(BE entity);
+    ID create(BE entity);
 
     /**
      * Retrieve from database by id
@@ -27,7 +29,7 @@ public interface BusinessDao<BE extends BusinessEntity> {
      * @param id
      * @return
      */
-    BE retrieveById(Long id);
+    BE retrieveById(ID id);
 
     /**
      * Retrieve all entries from database
@@ -49,6 +51,6 @@ public interface BusinessDao<BE extends BusinessEntity> {
      *
      * @param id : entity's id to delete
      */
-    void deleteById(Long id);
+    void deleteById(ID id);
 
 }
