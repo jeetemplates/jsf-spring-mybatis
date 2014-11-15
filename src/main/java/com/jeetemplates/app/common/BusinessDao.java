@@ -13,7 +13,7 @@ import java.util.List;
  * @param <ID>
  * @param <BE>
  */
-public interface BusinessDao<ID extends Serializable, BE extends BusinessEntity<ID>> {
+public interface BusinessDao<BE extends BusinessEntity> {
 
     /**
      * Create in database
@@ -21,7 +21,7 @@ public interface BusinessDao<ID extends Serializable, BE extends BusinessEntity<
      * @param entity
      * @return entity persisted
      */
-    ID create(BE entity);
+    Long create(BE entity);
 
     /**
      * Retrieve from database by id
@@ -29,7 +29,7 @@ public interface BusinessDao<ID extends Serializable, BE extends BusinessEntity<
      * @param id
      * @return
      */
-    BE retrieveById(ID id);
+    BE retrieveById(Long id);
 
     /**
      * Retrieve all entries from database
@@ -51,6 +51,6 @@ public interface BusinessDao<ID extends Serializable, BE extends BusinessEntity<
      *
      * @param id : entity's id to delete
      */
-    void deleteById(ID id);
+    void deleteById(Long id);
 
 }

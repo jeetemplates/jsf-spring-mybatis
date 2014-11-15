@@ -9,9 +9,8 @@ import java.io.Serializable;
  * Business Entity
  *
  * @author jeetemplates
- * @param <ID>
  */
-public abstract class BusinessEntity<ID extends Serializable> implements Serializable {
+public abstract class BusinessEntity implements Serializable {
 
     /**
      * Serial UID.
@@ -21,19 +20,19 @@ public abstract class BusinessEntity<ID extends Serializable> implements Seriali
     /**
      * Id.
      */
-    private ID id;
+    private Long id;
 
     /**
      * @return the id
      */
-    public ID getId() {
+    public Long getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(ID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -10,7 +10,7 @@ import com.jeetemplates.app.common.BusinessEntity;
  *
  * @author jeetemplates
  */
-public class HelloWorld extends BusinessEntity<Long> {
+public class HelloWorld extends BusinessEntity {
 
     /**
      * Serial UID.

@@ -11,6 +11,6 @@ import com.jeetemplates.app.domain.HelloWorld;
  *
  * @author jeetemplates
  */
-public interface HelloWorldDao extends BusinessDao<Long, HelloWorld> {
+public interface HelloWorldDao extends BusinessDao<HelloWorld> {
 
 }

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.jeetemplates.app.test.integration;
 
@@ -18,30 +18,31 @@ import com.jeetemplates.app.domain.HelloWorld;
 
 /**
  * Test of {@link HelloWorldDao}.
- * 
+ *
  * @author jeetemplates
  */
 public class HelloWorldDaoTest extends BaseDaoTest {
 
-	/**
-	 * {@link HelloWorldDao}.
-	 */
+    /**
+     * {@link HelloWorldDao}.
+     */
     @Autowired
-	private HelloWorldDao helloWorldDao;
+    private HelloWorldDao helloWorldDao;
 
-	/**
-	 * @see org.dbunit.DatabaseTestCase#getDataSet()
-	 */
-	@Override
-	protected IDataSet getDataSet() throws Exception {
-		return new FlatXmlDataSetBuilder().build(new FileInputStream("src/test/resources/dataset/dataset.xml"));
-	}
+    /**
+     * @return @throws java.lang.Exception
+     * @see org.dbunit.DatabaseTestCase#getDataSet()
+     */
+    @Override
+    protected IDataSet getDataSet() throws Exception {
+        return new FlatXmlDataSetBuilder().build(new FileInputStream("src/test/resources/dataset/dataset.xml"));
+    }
 
-	@Test
-	public void testRetrieveAll() {
-		List<HelloWorld> results = helloWorldDao.retrieveAll();
-		Assert.assertNotNull(results);
-		Assert.assertEquals(2, results.size());
-	}
+    @Test
+    public void testRetrieveAll() {
+        List<HelloWorld> results = helloWorldDao.retrieveAll();
+        Assert.assertNotNull(results);
+        Assert.assertEquals(2, results.size());
+    }
 
 }
