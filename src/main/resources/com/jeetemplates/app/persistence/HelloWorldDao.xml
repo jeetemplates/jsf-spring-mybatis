@@ -2,36 +2,34 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.2//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jeetemplates.app.persistence.HelloWorldDao">
 
-  <cache />
+    <cache />
+  
+    <insert id="create" 
+          parameterType="com.jeetemplates.app.domain.HelloWorld" 
+          useGeneratedKeys="true" 
+          keyColumn="ID" 
+          keyProperty="id">
+        INSERT INTO 
+        HELLO_WORLD (FIRST_NAME,LAST_NAME)
+        VALUES 
+        (#{firstName},#{lastName})
+        <!-- Generation of primary key. Database dependent -->
+        <!--   	<selectKey keyProperty="id" resultType="long" order="AFTER"> -->
+        <!--         CALL IDENTITY() -->
+        <!--     </selectKey> -->
+    </insert>
+  
+    <select id="retrieveAll" resultType="com.jeetemplates.app.domain.HelloWorld">
+        SELECT
+        ID AS id,
+        LAST_NAME AS lastName,
+        FIRST_NAME AS firstName
+        FROM HELLO_WORLD
+    </select>
+  
+    <!--   update -->
   
   
-  <insert id="create" 
-  		  parameterType="com.jeetemplates.app.domain.HelloWorld" 
-  		  useGeneratedKeys="true" 
-  		  keyColumn="ID" 
-  		  keyProperty="id"
-  		  >
-  	INSERT INTO 
-  		HELLO_WORLD (FIRST_NAME,LAST_NAME)
-  	VALUES 
-  		(#{firstName},#{lastName})
-  	<!-- Generation of primary key. Database dependent -->
-<!--   	<selectKey keyProperty="id" resultType="long" order="AFTER"> -->
-<!--         CALL IDENTITY() -->
-<!--     </selectKey> -->
-  </insert>
-  
-  <select id="retrieveAll" resultType="com.jeetemplates.app.domain.HelloWorld">
-    SELECT
-      ID AS id,
-      LAST_NAME AS lastName,
-      FIRST_NAME AS firstName
-    FROM HELLO_WORLD
-  </select>
-  
-<!--   update -->
-  
-  
-<!--   deleteById -->
+    <!--   deleteById -->
   
 </mapper>

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jeetemplates.app.common.dto;
+package com.jeetemplates.app.common;
 
 import java.io.Serializable;
 

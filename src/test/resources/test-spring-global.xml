@@ -7,12 +7,12 @@
 	http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-	<import resource="classpath:spring/spring.xml" />
+	<import resource="classpath:spring.xml" />
 
 	<!-- Resources -->
-	<context:property-placeholder
+<!--	<context:property-placeholder
 		location="classpath:persistence/test-datasource.properties, 
 				  classpath:persistence/hibernate.properties"
-		ignore-unresolvable="false" ignore-resource-not-found="true" />
+		ignore-unresolvable="false" ignore-resource-not-found="true" />-->
 
 </beans>

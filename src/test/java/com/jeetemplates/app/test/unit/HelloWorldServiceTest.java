@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.jeetemplates.app.service;
+package com.jeetemplates.app.test.unit;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +15,8 @@ import org.springframework.test.util.ReflectionTestUtils;
 
 import com.jeetemplates.app.domain.HelloWorld;
 import com.jeetemplates.app.persistence.HelloWorldDao;
-import com.jeetemplates.app.service.dto.HelloWorldDTO;
-import com.jeetemplates.app.service.impl.HelloWorldServiceImpl;
+import com.jeetemplates.app.feature.hello.HelloWorldDTO;
+import com.jeetemplates.app.feature.hello.HelloWorldService;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
 
@@ -41,7 +41,7 @@ public class HelloWorldServiceTest {
      */
     @Before
     public void init() {
-        helloWorldService = new HelloWorldServiceImpl();
+        helloWorldService = new HelloWorldService();
         ReflectionTestUtils.setField(helloWorldService, "helloWorldDao", helloWorldDao);
     }
 

@@ -10,8 +10,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 
 import com.jeetemplates.app.domain.HelloWorld;
-import com.jeetemplates.app.service.HelloWorldService;
-import com.jeetemplates.app.service.dto.HelloWorldDTO;
+import com.jeetemplates.app.feature.hello.HelloWorldDTO;
+import com.jeetemplates.app.feature.hello.HelloWorldService;
 import com.jeetemplates.app.web.form.HelloWorldForm;
 
 /**

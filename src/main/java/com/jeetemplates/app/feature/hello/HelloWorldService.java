@@ -1,8 +1,9 @@
 /**
  *
  */
-package com.jeetemplates.app.service.impl;
+package com.jeetemplates.app.feature.hello;
 
+import com.jeetemplates.app.persistence.HelloWorldDao;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +12,6 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.jeetemplates.app.domain.HelloWorld;
-import com.jeetemplates.app.persistence.HelloWorldDao;
-import com.jeetemplates.app.service.HelloWorldService;
-import com.jeetemplates.app.service.dto.HelloWorldDTO;
 import java.util.stream.Collectors;
 
 /**
@@ -22,7 +20,17 @@ import java.util.stream.Collectors;
  * @author jeetemplates
  */
 @Service(HelloWorldService.BEAN_NAME)
-public class HelloWorldServiceImpl implements HelloWorldService {
+public class HelloWorldService {
+
+    /**
+     * Bean name.
+     */
+    public static final String BEAN_NAME = "helloWorldService";
+
+    /**
+     * El name.
+     */
+    public static final String EL_NAME = "#{helloWorldService}";
 
     /* ************************************ */
     /* Dependencies */
@@ -36,13 +44,11 @@ public class HelloWorldServiceImpl implements HelloWorldService {
     /* ************************************ */
     /* Methods */
     /* ************************************ */
-    @Override
     @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
     public void create(HelloWorld entity) {
         helloWorldDao.create(entity);
     }
 
-    @Override
     @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
     public List<HelloWorldDTO> retrieveAll() {
         List<HelloWorld> entities = helloWorldDao.retrieveAll();

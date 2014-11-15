@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jeetemplates.app.common.persistence;
+package com.jeetemplates.app.common;
 
 import java.sql.Connection;
 import java.sql.SQLException;

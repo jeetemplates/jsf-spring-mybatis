@@ -1,22 +1,21 @@
 /**
  *
  */
-package com.jeetemplates.app.domain;
+package com.jeetemplates.app.feature.hello;
 
-import com.jeetemplates.app.common.BusinessEntity;
+import com.jeetemplates.app.common.GenericDTO;
 
 /**
- * Hello entity.
+ * Hello world dto
  *
  * @author jeetemplates
- * @param <Long>
  */
-public class HelloWorld<Long> extends BusinessEntity {
+public class HelloWorldDTO extends GenericDTO {
 
     /**
      * Serial UID.
      */
-    private static final long serialVersionUID = 1874597988200405724L;
+    private static final long serialVersionUID = -4404486271848958120L;
 
     /**
      * Last name.

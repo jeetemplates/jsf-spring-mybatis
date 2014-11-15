@@ -1,8 +1,9 @@
 /**
  * 
  */
-package com.jeetemplates.app.persistence;
+package com.jeetemplates.app.test.integration;
 
+import com.jeetemplates.app.persistence.HelloWorldDao;
 import java.io.FileInputStream;
 import java.util.List;
 
@@ -12,7 +13,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.jeetemplates.app.common.persistence.BaseDaoTest;
+import com.jeetemplates.app.common.BaseDaoTest;
 import com.jeetemplates.app.domain.HelloWorld;
 
 /**
