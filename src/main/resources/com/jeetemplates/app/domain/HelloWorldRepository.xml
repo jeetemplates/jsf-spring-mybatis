@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.2//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jeetemplates.app.persistence.HelloWorldDao">
+<mapper namespace="com.jeetemplates.app.domain.HelloWorldRepository">
 
     <cache />
   

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jeetemplates.app.web.exception;
+package com.jeetemplates.app.interfaces.web.exception;
 
 import javax.faces.context.ExceptionHandler;
 import javax.faces.context.ExceptionHandlerFactory;

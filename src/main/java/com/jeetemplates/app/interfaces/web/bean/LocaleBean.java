@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.jeetemplates.app.web.bean;
+package com.jeetemplates.app.interfaces.web.bean;
 
 import java.io.Serializable;
 import java.util.Locale;

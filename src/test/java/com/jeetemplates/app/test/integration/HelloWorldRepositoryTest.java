@@ -3,7 +3,7 @@
  */
 package com.jeetemplates.app.test.integration;
 
-import com.jeetemplates.app.persistence.HelloWorldDao;
+import com.jeetemplates.app.domain.HelloWorldRepository;
 import java.io.FileInputStream;
 import java.util.List;
 
@@ -13,21 +13,21 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.jeetemplates.app.common.BaseDaoTest;
+import com.jeetemplates.app.common.BaseRepositoryTest;
 import com.jeetemplates.app.domain.HelloWorld;
 
 /**
- * Test of {@link HelloWorldDao}.
+ * Test of {@link HelloWorldRepository}.
  *
  * @author jeetemplates
  */
-public class HelloWorldDaoTest extends BaseDaoTest {
+public class HelloWorldRepositoryTest extends BaseRepositoryTest {
 
     /**
-     * {@link HelloWorldDao}.
+     * {@link HelloWorldRepository}.
      */
     @Autowired
-    private HelloWorldDao helloWorldDao;
+    private HelloWorldRepository helloWorldDao;
 
     /**
      * @return @throws java.lang.Exception

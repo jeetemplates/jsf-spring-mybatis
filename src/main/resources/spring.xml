@@ -15,7 +15,7 @@
 
     <!-- MyBatis Mappers -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.jeetemplates.app.persistence" />
+        <property name="basePackage" value="com.jeetemplates.app" />
     </bean>
         
     <!-- In memory database, comment it if you want to use C3P0 datasource -->

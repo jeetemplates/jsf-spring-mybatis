@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.jeetemplates.app.web.controller;
+package com.jeetemplates.app.interfaces.web.controller;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 
 import com.jeetemplates.app.domain.HelloWorld;
-import com.jeetemplates.app.feature.hello.HelloWorldDTO;
-import com.jeetemplates.app.feature.hello.HelloWorldService;
-import com.jeetemplates.app.web.form.HelloWorldForm;
+import com.jeetemplates.app.application.HelloWorldDTO;
+import com.jeetemplates.app.application.HelloWorldService;
+import com.jeetemplates.app.interfaces.web.form.HelloWorldForm;
 
 /**
  * Welcome controller.

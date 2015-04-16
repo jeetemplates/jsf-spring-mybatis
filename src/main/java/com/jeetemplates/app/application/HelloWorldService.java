@@ -1,9 +1,9 @@
 /**
  *
  */
-package com.jeetemplates.app.feature.hello;
+package com.jeetemplates.app.application;
 
-import com.jeetemplates.app.persistence.HelloWorldDao;
+import com.jeetemplates.app.domain.HelloWorldRepository;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,22 +36,22 @@ public class HelloWorldService {
     /* Dependencies */
     /* ************************************ */
     /**
-     * {@link HelloWorldDao}
+     * {@link HelloWorldRepository}
      */
     @Autowired
-    private HelloWorldDao helloWorldDao;
+    private HelloWorldRepository helloWorldRepository;
 
     /* ************************************ */
     /* Methods */
     /* ************************************ */
     @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
     public void create(HelloWorld entity) {
-        helloWorldDao.create(entity);
+        helloWorldRepository.create(entity);
     }
 
     @Transactional(propagation = Propagation.REQUIRED, readOnly = true)
     public List<HelloWorldDTO> retrieveAll() {
-        List<HelloWorld> entities = helloWorldDao.retrieveAll();
+        List<HelloWorld> entities = helloWorldRepository.retrieveAll();
         return entities.stream().map((HelloWorld entity) -> {
             HelloWorldDTO dto = new HelloWorldDTO();
             dto.setFirstName(entity.getFirstName());

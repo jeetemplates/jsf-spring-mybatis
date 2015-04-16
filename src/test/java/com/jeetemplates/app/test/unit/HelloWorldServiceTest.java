@@ -14,10 +14,11 @@ import org.mockito.Mockito;
 import org.springframework.test.util.ReflectionTestUtils;
 
 import com.jeetemplates.app.domain.HelloWorld;
-import com.jeetemplates.app.persistence.HelloWorldDao;
-import com.jeetemplates.app.feature.hello.HelloWorldDTO;
-import com.jeetemplates.app.feature.hello.HelloWorldService;
+import com.jeetemplates.app.domain.HelloWorldRepository;
+import com.jeetemplates.app.application.HelloWorldDTO;
+import com.jeetemplates.app.application.HelloWorldService;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
 import org.mockito.runners.MockitoJUnitRunner;
 
 /**
@@ -34,25 +35,17 @@ public class HelloWorldServiceTest {
     /**
      * {@link HelloWorldService}.
      */
+    @InjectMocks
     private HelloWorldService helloWorldService;
-
-    /**
-     * Init.
-     */
-    @Before
-    public void init() {
-        helloWorldService = new HelloWorldService();
-        ReflectionTestUtils.setField(helloWorldService, "helloWorldDao", helloWorldDao);
-    }
 
     /* ************************************************************** */
     /* Mocks */
     /* ************************************************************** */
     /**
-     * {@link HelloWorldDao}.
+     * {@link HelloWorldRepository}.
      */
     @Mock
-    private HelloWorldDao helloWorldDao;
+    private HelloWorldRepository helloWorldRepository;
 
     /* ************************************************************** */
     /* Methods */
@@ -63,14 +56,14 @@ public class HelloWorldServiceTest {
     @Test
     public void testRetrieveAll() {
         // Mock result
-        List<HelloWorld> mockResult = new ArrayList<HelloWorld>();
+        List<HelloWorld> mockResult = new ArrayList<>();
         HelloWorld mockHello = new HelloWorld();
         mockHello.setFirstName("first name");
         mockHello.setLastName("last name");
         mockResult.add(mockHello);
 
         // Mock call method
-        Mockito.when(helloWorldDao.retrieveAll()).thenReturn(mockResult);
+        Mockito.when(helloWorldRepository.retrieveAll()).thenReturn(mockResult);
 
         // Call service
         List<HelloWorldDTO> result = helloWorldService.retrieveAll();

@@ -1,16 +1,14 @@
 /**
  *
  */
-package com.jeetemplates.app.feature.hello;
-
-import com.jeetemplates.app.common.GenericDTO;
+package com.jeetemplates.app.application;
 
 /**
  * Hello world dto
  *
  * @author jeetemplates
  */
-public class HelloWorldDTO extends GenericDTO {
+public class HelloWorldDTO {
 
     /**
      * Serial UID.

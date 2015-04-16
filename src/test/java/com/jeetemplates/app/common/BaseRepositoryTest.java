@@ -26,7 +26,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "/test-spring-global.xml" })
-public abstract class BaseDaoTest extends DBTestCase {
+public abstract class BaseRepositoryTest extends DBTestCase {
 
 	/**
 	 * {@link DataSource} : datasource.
