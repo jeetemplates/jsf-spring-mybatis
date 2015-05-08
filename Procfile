@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -javaagent:target/dependency/newrelic-agent.jar -Dnewrelic.enable.java.8 -jar target/dependency/jetty-runner.jar --port $PORT target/*.war
+web: java $JAVA_OPTS -javaagent:target/dependency/newrelic-agent.jar -jar target/dependency/jetty-runner.jar --port $PORT target/*.war

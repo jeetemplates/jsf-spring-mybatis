@@ -140,7 +140,7 @@
         <dependency>
             <groupId>com.newrelic.agent.java</groupId>
             <artifactId>newrelic-agent</artifactId>
-            <version>3.9.0</version>
+            <version>3.15.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
