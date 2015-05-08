@@ -14,3 +14,5 @@ Frameworks
 - MyBatis 3.2
 
 Home page : http://localhost:8080/jsf-spring-mybatis/faces/home.xhtml
+
+Coveralls configuration : https://github.com/trautonen/coveralls-maven-plugin
