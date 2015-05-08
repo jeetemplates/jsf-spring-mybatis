@@ -5,14 +5,16 @@
 
     <display-name>Java EE Template JSF-Spring-MyBatis</display-name>
 
+    <!-- Add Support for JSF in Jetty -->
+    <listener>
+        <listener-class>com.sun.faces.config.ConfigureListener</listener-class>
+    </listener>
     <!-- Add Support for Spring -->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
     <listener>
-        <listener-class>
-            org.springframework.web.context.request.RequestContextListener
-        </listener-class>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
     </listener>
 
     <!-- Change to "Production" when you are ready to deploy -->
