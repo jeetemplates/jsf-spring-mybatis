@@ -1,4 +1,4 @@
-jsf-spring-mybatis
+jsf-spring-mybatis [![Build Status](https://travis-ci.org/jeetemplates/jsf-spring-mybatis.svg)](https://travis-ci.org/jeetemplates/jsf-spring-mybatis) [![Dependency Status](https://www.versioneye.com/user/projects/5541c7f26f8344ac9300026d/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5541c7f26f8344ac9300026d) [![Coverage Status](https://coveralls.io/repos/jeetemplates/jsf-spring-mybatis/badge.svg)](https://coveralls.io/r/jeetemplates/jsf-spring-mybatis)
 ==================
 
 Template for building JEE app with JSF, Spring and Mybatis
