@@ -18,4 +18,6 @@ Frameworks
 
 Home page : http://localhost:8080/jsf-spring-mybatis/faces/home.xhtml
 
+Demo page : https://jsf-spring-mybatis.herokuapp.com/faces/home.xhtml
+
 Coveralls configuration : https://github.com/trautonen/coveralls-maven-plugin
