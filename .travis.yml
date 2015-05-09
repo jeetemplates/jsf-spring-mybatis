@@ -1,5 +1,12 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 after_success:
-  - mvn clean test jacoco:report coveralls:report
+- mvn clean test jacoco:report coveralls:report
+deploy:
+  provider: heroku
+  api_key:
+    secure: ZT4gpveMEC4Gsskx+N8RD4zzujar0ksSVUOj1tvodkW+0KUSN+LKOFSVT9FrNv13lFARcSWpGZni2coYmQi6Ti8Uce6G8ZNMiqK2ymEFrliYMuS0MDvCR8Oqc1Wc7aBcLGcTD0zl8EjwLAHY7k5gA70Xtj+mURzUkk2iLeQeXto=
+  app: jsf-spring-mybatis
+  on:
+    repo: jeetemplates/jsf-spring-mybatis
